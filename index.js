@@ -42,13 +42,25 @@ app.use(mongoSanitize());
 app.use(helmet());// adds security-related headers to HTTP response
 
 app.use(morgan('combined')); // logs incoming HTTP requests
+
+const allowedOrigins = [
+    'https://shopplusplus-user-frontend.vercel.app',
+];
+
 const corsConfig = {
-    origin: true,
-    credentials: true,
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true); // Allow the request
+        } else {
+            callback(new Error('Not allowed by CORS')); // Deny the request
+        }
+    },
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
 
 app.use(cors(corsConfig));
-app.options('*', cors(corsConfig))
+app.options('*', cors(corsConfig));
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
