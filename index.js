@@ -47,8 +47,7 @@ const allowedOrigins = [
     'https://shopplusplus-user-frontend.vercel.app',
     'https://shopplusplus-admin-dashboard.vercel.app',
     'https://shopplusplus-seller-dashboard.vercel.app',
-    'https://shopplusplus-ticket-master-dashboard.vercel.app',
-    'https://*'
+    'https://shopplusplus-ticket-master-dashboard.vercel.app'
 ];
 
 const corsConfig = {
