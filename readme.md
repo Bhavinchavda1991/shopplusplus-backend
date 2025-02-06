@@ -1,3 +1,32 @@
+## Demo Links
+
+Here are the live demo links for different parts of the project:
+
+- [User Frontend](https://shopplusplus-user-frontend.vercel.app)
+- [Admin Dashboard](https://shopplusplus-admin-dashboard.vercel.app)
+- [Seller Dashboard](https://shopplusplus-seller-dashboard.vercel.app)
+- [Ticket Master Dashboard](https://shopplusplus-ticket-master-dashboard.vercel.app)
+
+## Login Credentials
+
+You can use the following credentials to log in to the demo applications:
+
+### Admin User
+- **Email**: admin@gmail.com
+- **Password**: admin1234
+
+### Superadmin User
+- **Email**: superadmin@gmail.com
+- **Password**: superadmin1234
+
+### Root User
+- **Email**: root@gmail.com
+- **Password**: root1234
+
+### Ticket Master User
+- **Email**: ticketmaster@gmail.com
+- **Password**: ticketmaster1234
+
 # Node.js Application Setup Guide
 
 This guide will help you set up and run your Node.js application locally. Follow the instructions below to configure your environment variables and connect your services.
