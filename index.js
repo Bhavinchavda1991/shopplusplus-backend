@@ -23,7 +23,7 @@ const ticketMasterRoutes = require('./routes/ticketmaster/ticketMasterRoutes')
 const superAdminRoutes = require('./routes/superadmin/superAdminRouter')
 const rootRouter = require('./routes/root/rootRouter')
 
-const rateLimiterMiddleware = require('./middleware/rateLimitermiddleware');
+// const rateLimiterMiddleware = require('./middleware/rateLimitermiddleware');
 
 const connectDB = require('./utils/connectDB');
 const ipBannedMiddleware = require('./middleware/checkIpBanned');
@@ -57,7 +57,7 @@ app.use((req, res, next) => {
     res.setHeader('Content-Security-Policy', "default-src 'self'");
     next();
 });
-app.use(rateLimiterMiddleware);
+// app.use(rateLimiterMiddleware);
 app.use(ipBannedMiddleware);
 app.use(assignUniqueIdentity);
 
