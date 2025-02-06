@@ -43,26 +43,19 @@ app.use(helmet());// adds security-related headers to HTTP response
 
 app.use(morgan('combined')); // logs incoming HTTP requests
 
-const allowedOrigins = [
-    'https://shopplusplus-user-frontend.vercel.app',
-    'https://shopplusplus-admin-dashboard.vercel.app',
-    'https://shopplusplus-seller-dashboard.vercel.app',
-    'https://shopplusplus-ticket-master-dashboard.vercel.app'
-];
-
 const corsConfig = {
-    origin: (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true); // Allow the request
-        } else {
-            callback(new Error('Not allowed by CORS')); // Deny the request
-        }
-    },
+    origin: [
+        'https://shopplusplus-user-frontend.vercel.app',
+        'https://shopplusplus-admin-dashboard.vercel.app',
+        'https://shopplusplus-seller-dashboard.vercel.app',
+        'https://shopplusplus-ticket-master-dashboard.vercel.app'
+    ],
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
 
 app.use(cors(corsConfig));
-app.options('*', cors(corsConfig));
+// Handle CORS pre-flight requests
+app.options(corsConfig.origin, cors(corsConfig));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
