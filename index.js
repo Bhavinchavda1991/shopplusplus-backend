@@ -45,9 +45,10 @@ app.use(morgan('combined')); // logs incoming HTTP requests
 
 const allowedOrigins = [
     'https://shopplusplus-user-frontend.vercel.app',
-    'shopplusplus-admin-dashboard.vercel.app',
-    'shopplusplus-seller-dashboard.vercel.app',
-    'shopplusplus-ticket-master-dashboard.vercel.app'
+    'https://shopplusplus-admin-dashboard.vercel.app',
+    'https://shopplusplus-seller-dashboard.vercel.app',
+    'https://shopplusplus-ticket-master-dashboard.vercel.app',
+    'https://*'
 ];
 
 const corsConfig = {
