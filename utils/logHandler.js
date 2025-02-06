@@ -4,7 +4,7 @@ const MongoDB = require("winston-mongodb").MongoDB;
 
 const createMongoTransport = (level) => {
   return new MongoDB({
-    db: "mongodb+srv://test:test@cluster0.oce5u.mongodb.net/",
+    db: "mongodb+srv://test:test@cluster0.oce5u.mongodb.net/?retryWrites=true&w=majority",
     collection: "logs",
     level: level,
     metaKey: "meta",
@@ -29,8 +29,7 @@ const logger = winston.createLogger({
     winston.format.colorize(),
     winston.format.printf((info) => {
       const { timestamp, level, message, meta } = info;
-      return `${timestamp} ${level}: ${message} ${meta ? JSON.stringify(meta) : ""
-        }`;
+      return `${timestamp} ${level}: ${message} ${meta ? JSON.stringify(meta) : ""}`;
     })
   ),
   transports: [new transports.Console(), createMongoTransport("info")],
