@@ -2,10 +2,10 @@
 
 Here are the live demo links for different parts of the project:
 
-- [User Frontend](https://shopplusplus-user-frontend.vercel.app)
-- [Admin Dashboard](https://shopplusplus-admin-dashboard.vercel.app)
-- [Seller Dashboard](https://shopplusplus-seller-dashboard.vercel.app)
-- [Ticket Master Dashboard](https://shopplusplus-ticket-master-dashboard.vercel.app)
+- [User Frontend](https://shopplusplus.tech)
+- [Admin Dashboard](https://admin.shopplusplus.tech)
+- [Seller Dashboard](https://seller.shopplusplus.tech)
+- [Ticket Master Dashboard](https://ticketmaster.shopplusplus.tech)
 
 ## Login Credentials
 
