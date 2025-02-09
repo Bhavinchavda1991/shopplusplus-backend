@@ -45,13 +45,15 @@ app.use(morgan('combined')); // logs incoming HTTP requests
 
 const corsConfig = {
     origin: [
-        'https://shopplusplus-user-frontend.vercel.app',
-        'https://shopplusplus-admin-dashboard.vercel.app',
-        'https://shopplusplus-seller-dashboard.vercel.app',
-        'https://shopplusplus-ticket-master-dashboard.vercel.app',
+        'https://admin.shopplusplus.tech',
+        'https://seller.shopplusplus.tech',
+        'https://shopplusplus.tech',
+        'https://www.shopplusplus.tech',
+        'https://ticketmaster.shopplusplus.tech',
+        'http://localhost:3000',
         'http://localhost:3001',
         'http://localhost:3002',
-        'http://localhost:3003'
+        'http://localhost:3003',
     ],
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
