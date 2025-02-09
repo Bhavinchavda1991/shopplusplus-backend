@@ -49,9 +49,9 @@ const corsConfig = {
         'https://shopplusplus-admin-dashboard.vercel.app',
         'https://shopplusplus-seller-dashboard.vercel.app',
         'https://shopplusplus-ticket-master-dashboard.vercel.app',
-        'http://localhost:3001/',
-        'http://localhost:3002/',
-        'http://localhost:3003/'
+        'http://localhost:3001',
+        'http://localhost:3002',
+        'http://localhost:3003'
     ],
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 };
